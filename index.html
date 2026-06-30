@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nexura Arena - Gladiadores Genéticos</title>
+    <!-- Patch window.fetch for iframe environments with read-only fetch -->
+    <script>
+      (function() {
+        try {
+          var originalFetch = window.fetch;
+          Object.defineProperty(window, 'fetch', {
+            configurable: true,
+            enumerable: true,
+            get: function() {
+              return originalFetch;
+            },
+            set: function(val) {
+              originalFetch = val;
+            }
+          });
+        } catch (e) {
+          console.warn("Could not patch window.fetch setter:", e);
+        }
+      })();
+    </script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <script type="module" crossorigin src="/NEXUSGAMER/assets/index-DQR7dGHP.js"></script>
+    <link rel="stylesheet" crossorigin href="/NEXUSGAMER/assets/index-C46zH_w9.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
+
